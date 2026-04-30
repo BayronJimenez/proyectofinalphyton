@@ -21,5 +21,4 @@ etiqueta = tk.Label(
 )
 etiqueta.pack(expand=True, fill='both')
 
-# Ejecutar la ventana
 ventana.mainloop()

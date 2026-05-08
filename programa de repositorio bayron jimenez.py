@@ -1,24 +1,28 @@
 import tkinter as tk
 from tkinter import font
 
-# Crear ventana principal
+# Crear la ventana principal
 ventana = tk.Tk()
 ventana.title("Programa para subir a repositorio")
-ventana.geometry("600x300")  # Ventana más grande para texto grande
+ventana.geometry("500x300")  # Tamaño más grande
 
-# Crear una fuente grande y estilizada
-fuente_linda = font.Font(family="Comic Sans MS", size=20, weight="bold", slant="italic")
+# Configurar el fondo de la ventana
+ventana.configure(bg="#1E1E2F")  # Fondo oscuro elegante
 
-# Crear un label con colores llamativos
+# Crear un estilo de fuente personalizado
+fuente_personalizada = font.Font(family="Helvetica", size=16, weight="bold")
+
+# Crear la etiqueta con texto más grande y colores llamativos
 etiqueta = tk.Label(
     ventana,
-    text="Este programa es de Bayron Jimenez Lerma",
-    font=fuente_linda,
-    fg="yellow",     # Color del texto
-    bg="darkblue",   # Fondo llamativo
-    padx=20,
-    pady=20
+    text="Este programa es de bayron jimenez lerma",
+    font=fuente_personalizada,
+    fg="#FFD700",  # Texto dorado
+    bg="#1E1E2F",  # Fondo coincide con la ventana
+    wraplength=400,  # Ajuste de texto para que no se salga de la ventana
+    justify="center"
 )
-etiqueta.pack(expand=True, fill='both')
+etiqueta.pack(pady=50)
 
+# Ejecutar la ventana
 ventana.mainloop()
